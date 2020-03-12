@@ -1,0 +1,37 @@
+{
+  "name": "fastify_nuxt_typescript",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Dmitriy Saftiuc",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.ts --watch server",
+    "debug": "node --inspect-brk -r ts-node/register server/index.ts",
+    "build": "node -r ts-node/register node_modules/nuxt/bin/nuxt build -c client/nuxt.config.ts",
+    "start": "cross-env NODE_ENV=production ts-node server/index.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.6.1",
+    "cross-env": "^5.2.1",
+    "dotenv": "^8.2.0",
+    "fastify": "^1.14.6",
+    "nuxt": "^2.11.0"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^0.6.0",
+    "@types/node": "^13.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "@vue/test-utils": "^1.0.0-beta.32",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3",
+    "vue-jest": "^4.0.0-0"
+  }
+}
